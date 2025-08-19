@@ -1,21 +1,86 @@
-Instruksi 
-https://github.com/SoundnessLabs/soundness-layer/tree/main/soundness-cli
+# Soundness CLI
 
-Besumber dari https://github.com/SoundnessLabs/soundness-layer/tree/main/soundness-cli
-buatkan dockerfile tunuk program tersebut
-#install CLI
+A command-line interface tool based on [Soundness Layer](https://github.com/SoundnessLabs/soundness-layer/tree/main/soundness-cli).
+
+## Local Installation
+
+Install the required dependencies and CLI tool:
+
+```bash
+# Install Soundness CLI
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
+```
+
+```bash
+# Add to environment
 source ~/.bashrc
+```
+
+```bash
+# Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-soundnessup install  # Install the CLI
-soundnessup update   # Update to the latest version
+```bash
+# Install the CLI
+soundnessup install
+```
 
-#adapun fitur yang bisa di akses melalui terminal untuk user diantarnanya
-$ soundness-cli generate-key --name my-key // Untuk membuat key baru
-$ soundness-cli import-key --name my-key // Untuk Import key
-$ soundness-cli list-keys // Untuk melihat key
-$ soundness-cli export-key --name my-key // Untuk melihat frasa
-<img width="873" height="287" alt="image" src="https://github.com/user-attachments/assets/307045cc-8f50-4d4f-8208-a2ed6e16ea9f" />
-# Soundness
-Just Codespace
+```bash
+# Update to latest version
+soundnessup update
+```
+
+## Docker Installation
+
+To use Soundness CLI with Docker:
+
+```bash
+# Pull the Docker image
+docker pull soundnesslabs/soundness-cli
+
+# Run the CLI in a container
+docker run -it soundnesslabs/soundness-cli
+```
+
+For custom configurations, you can build your own image using the Dockerfile in this repository:
+
+```bash
+# Build the image
+docker build -t my-soundness-cli .
+
+# Run your custom build
+docker run -it my-soundness-cli
+```
+
+## Available Commands
+
+### Key Management
+
+Generate a new key:
+
+```bash
+soundness-cli generate-key --name my-key
+```
+
+Import existing key:
+
+```bash
+soundness-cli import-key --name my-key
+```
+
+List all keys:
+
+```bash
+soundness-cli list-keys
+```
+
+Export key phrase:
+
+```bash
+soundness-cli export-key --name my-key
+```
+
+## Example Output
+
+![Command Line Interface](https://github.com/user-attachments/assets/307045cc-8f50-4d4f-8208-a2ed6e16ea9f)
