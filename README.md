@@ -7,6 +7,16 @@ A command-line interface tool based on [Soundness Layer](https://github.com/Soun
 Install the required dependencies and CLI tool:
 
 ```bash
+# Install required dependencies
+sudo apt update
+sudo apt install libssl-dev pkg-config
+
+# Install build essentials
+sudo apt update
+sudo apt install build-essential
+```
+
+```bash
 # Install Soundness CLI
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
 ```
